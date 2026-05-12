@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* ─── Global Responsive Foundation ──────────────────────────────────── */
+
+html {
+  font-size: 16px;          /* base for rem units */
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent; /* remove tap flash on mobile */
+}
+
+/* Fluid typography scale */
+@media (max-width: 480px) {
+  html { font-size: 15px; }
+}
+
+/* Ensure all images are fluid by default */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure buttons & interactive links meet 44px touch target minimum */
+button, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Exception for tiny icon-only buttons that sit inside padded containers */
+.touch-sm {
+  min-height: 2rem;
+  min-width: 2rem;
+}
+
+/* Hide scrollbar utility (used on sidebar nav) */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive table card flip helper */
+@media (max-width: 640px) {
+  .table-card-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+}
